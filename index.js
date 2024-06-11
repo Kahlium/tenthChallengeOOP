@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const Logo = require('./logo.js');
 
 const questions = [
     {
@@ -27,6 +28,7 @@ const questions = [
 inquirer
     .prompt(questions)
     
-    .then((response) => {
-
+    .then(({ text, textColor, shape, shapeColor }) => {
+        const logo = new Logo(text, textColor, shape, shapeColor);
+        console.log(logo.createSVG())
     })
