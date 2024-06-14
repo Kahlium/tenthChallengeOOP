@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const Logo = require('./logo.js');
+const fs = require("fs")
 
 const questions = [
     {
@@ -16,7 +17,7 @@ const questions = [
         type: 'list',
         message: 'Choose your shape',
         name: 'shape',
-        choices: ["Square", "Triangle", "Circle"]
+        choices: ["square", "triangle", "circle"]
     },
     {
         type: 'input',
@@ -29,6 +30,12 @@ inquirer
     .prompt(questions)
     
     .then(({ text, textColor, shape, shapeColor }) => {
+        const fileName = "logo.svg"
         const logo = new Logo(text, textColor, shape, shapeColor);
         console.log(logo.createSVG())
+
+        fs.writeFile(fileName, logo.createSVG(), (err) => 
+                err ? console.log(err) : console.log('Success')
+        )
+        
     })
