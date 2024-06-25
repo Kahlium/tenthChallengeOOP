@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const Logo = require('./logo.js');
+const Shapes = require('./shapes.js');
 const fs = require("fs")
 
 const questions = [
@@ -31,7 +31,7 @@ inquirer
     
     .then(({ text, textColor, shape, shapeColor }) => {
         const fileName = "logo.svg"
-        const logo = new Logo(text, textColor, shape, shapeColor);
+        const logo = new Shapes(text, textColor, shape, shapeColor);
         console.log(logo.createSVG())
 
         fs.writeFile(fileName, logo.createSVG(), (err) => 
