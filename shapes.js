@@ -1,8 +1,8 @@
 const Logo = require('./logo.js');
 
 class Circle extends Logo {
-    constructor(text, textColor, shape, shapeColor) {
-        super(text, textColor, shape, shapeColor);
+    constructor(text, textColor, shapeColor) {
+        super(text, textColor, "circle", shapeColor);
     }
 
     createSVG() {
@@ -11,8 +11,8 @@ class Circle extends Logo {
 }
 
 class Triangle extends Logo {
-    constructor(text, textColor, shape, shapeColor) {
-        super(text, textColor, shape, shapeColor);
+    constructor(text, textColor, shapeColor) {
+        super(text, textColor, "triangle", shapeColor);
     }
 
     createSVG() {
@@ -21,8 +21,8 @@ class Triangle extends Logo {
 }
 
 class Square extends Logo {
-    constructor(text, textColor, shape, shapeColor) {
-        super(text, textColor, shape, shapeColor);
+    constructor(text, textColor, shapeColor) {
+        super(text, textColor, "square", shapeColor);
     }
 
     createSVG() {
