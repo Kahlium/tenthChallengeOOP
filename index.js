@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
-const Shapes = require('./shapes.js');
+const Circle = require('./shapes.js');
+const Triangle = require('./shapes.js');
+const Square = require('./shapes.js');
 const fs = require("fs")
 
 const questions = [
@@ -28,14 +30,21 @@ const questions = [
 
 inquirer
     .prompt(questions)
-    
+
     .then(({ text, textColor, shape, shapeColor }) => {
         const fileName = "logo.svg"
-        const logo = new Shapes(text, textColor, shape, shapeColor);
+        let logo = " "
+        if (shape === "circle") {
+            logo = new Circle(text, textColor, shape, shapeColor)
+        } else if (shape === "triangle") {
+            logo = new Triangle(text, textColor, shape, shapeColor)
+        } else if (shape === "square") {
+            logo = new Square(text, textColor, shape, shapeColor)
+        }
         console.log(logo.createSVG())
 
-        fs.writeFile(fileName, logo.createSVG(), (err) => 
-                err ? console.log(err) : console.log('Success')
+        fs.writeFile(fileName, logo.createSVG(), (err) =>
+            err ? console.log(err) : console.log('Success')
         )
-        
+
     })
