@@ -34,6 +34,7 @@ describe('Square', () => {
 
         const expectedHTML = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><rect width="150" height="150" x="75" y="25" fill="${shapeColor}" /><text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text></svg>`;
         const square = new Square(text, textColor, shapeColor);
+        console.log(square)
         expect(square.createSVG()).toEqual(expectedHTML);
     });
 });

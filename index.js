@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
-const Circle = require('./shapes.js');
-const Triangle = require('./shapes.js');
-const Square = require('./shapes.js');
+const { Circle, Triangle, Square } = require('./shapes.js');
+// const Triangle = require('./shapes.js');
+// const Square = require('./shapes.js');
 const fs = require("fs")
 
 const questions = [
@@ -27,6 +27,9 @@ const questions = [
         name: 'shapeColor'
     }
 ];
+
+const circle = new Square("text", "red", "blue")
+console.log(circle)
 
 inquirer
     .prompt(questions)
