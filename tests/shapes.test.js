@@ -1,6 +1,4 @@
-const Circle = require('../shapes.js');
-const Triangle = require('../shapes.js');
-const Square = require('../shapes.js');
+const { Circle, Triangle, Square } = require('../shapes.js');
 
 describe('Circle', () => {
     test('Should make an svg file with text in the middle of a circle', () => {
