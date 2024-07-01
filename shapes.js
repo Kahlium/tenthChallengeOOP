@@ -12,8 +12,8 @@ class Logo {
 }
 
 class Circle extends Logo {
-    constructor(text, textColor, shapeColor) {
-        super(text, textColor, "circle", shapeColor);
+    constructor(text, textColor, shape, shapeColor) {
+        super(text, textColor, shape, shapeColor);
     }
 
     createSVG() {
@@ -22,8 +22,8 @@ class Circle extends Logo {
 }
 
 class Triangle extends Logo {
-    constructor(text, textColor, shapeColor) {
-        super(text, textColor, "triangle", shapeColor);
+    constructor(text, textColor, shape, shapeColor) {
+        super(text, textColor, shape, shapeColor);
     }
 
     createSVG() {
@@ -32,8 +32,8 @@ class Triangle extends Logo {
 }
 
 class Square extends Logo {
-    constructor(text, textColor, shapeColor) {
-        super(text, textColor, "square", shapeColor);
+    constructor(text, textColor, shape, shapeColor) {
+        super(text, textColor, shape, shapeColor);
     }
 
     createSVG() {
