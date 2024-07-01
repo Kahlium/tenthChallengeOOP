@@ -26,9 +26,6 @@ const questions = [
     }
 ];
 
-const circle = new Square("text", "red", "blue")
-console.log(circle)
-
 inquirer
     .prompt(questions)
 
